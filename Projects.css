@@ -1,0 +1,156 @@
+.projects {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 4rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  align-items: start;
+}
+
+.projects-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: var(--font-en-hand);
+  font-size: 1.25rem;
+  color: var(--color-muted);
+  padding: 2rem 1rem;
+}
+
+.projects-embed {
+  grid-column: 1 / -1;
+}
+
+.projects-embed-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.projects-embed-emoji {
+  font-size: 2rem;
+}
+
+.projects-frame {
+  background: var(--color-paper);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-line);
+  padding: 0.6rem;
+  overflow: hidden;
+}
+
+.projects-frame iframe {
+  width: 100%;
+  height: 760px;
+  border: 0;
+  border-radius: var(--radius-md);
+  display: block;
+  background: #f4f6fb;
+}
+
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.8rem 1.6rem 1.6rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-card:hover {
+  transform: translateY(-4px) rotate(-0.4deg);
+  box-shadow: var(--shadow-soft);
+}
+
+/* tape colour per accent */
+.projects-card--blush::before {
+  background: rgba(242, 154, 181, 0.7);
+}
+.projects-card--sage::before {
+  background: rgba(181, 212, 201, 0.8);
+}
+.projects-card--lavender::before {
+  background: rgba(212, 184, 224, 0.8);
+}
+
+.projects-emoji {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--color-soft-yellow), var(--color-peach));
+  border: 3px solid var(--color-paper);
+  box-shadow: var(--shadow-tape);
+  margin-bottom: 0.2rem;
+}
+
+.projects-card--sage .projects-emoji {
+  background: linear-gradient(135deg, var(--color-sage), var(--color-soft-yellow));
+}
+.projects-card--lavender .projects-emoji {
+  background: linear-gradient(135deg, var(--color-lavender), var(--color-peach));
+}
+
+.projects-card-title {
+  font-size: 1.5rem;
+  color: var(--color-terracotta);
+}
+
+.projects-blurb {
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+.projects-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.2rem 0;
+}
+
+.projects-highlights li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--color-ink);
+  font-size: 0.96rem;
+}
+
+.projects-highlights li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-blush);
+  font-size: 0.9rem;
+}
+
+.projects-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.projects-tag {
+  font-family: var(--font-en-hand);
+  font-size: 1rem;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(253, 231, 179, 0.6);
+  color: var(--color-warm-brown);
+  border: 1px dashed var(--color-blush);
+}
+
+@media (max-width: 600px) {
+  .projects { padding: 3rem 1rem 3rem; }
+  .projects-grid { grid-template-columns: 1fr; }
+}
