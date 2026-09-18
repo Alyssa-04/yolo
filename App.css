@@ -1,0 +1,103 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1.6rem;
+  background: rgba(253, 246, 236, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-line);
+  box-shadow: 0 2px 12px rgba(139, 90, 60, 0.06);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-handwrite);
+  font-size: 1.5rem;
+  color: var(--color-terracotta);
+}
+
+.nav-brand-mark {
+  font-size: 1.4rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  color: var(--color-warm-brown);
+  font-size: 0.95rem;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.nav-link:hover {
+  background: rgba(247, 217, 196, 0.6);
+  color: var(--color-terracotta);
+}
+
+.footer {
+  margin-top: 2rem;
+  padding: 2.4rem 1.5rem;
+  background: var(--color-paper);
+  border-top: 1px dashed var(--color-line);
+}
+
+.footer-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer-note {
+  font-family: var(--font-en-hand);
+  font-size: 1.25rem;
+  color: var(--color-terracotta);
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.footer-back {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-family: var(--font-en-hand);
+  font-size: 1.05rem;
+  color: var(--color-terracotta);
+  padding: 0.25rem 0.9rem;
+  border: 1.5px dashed var(--color-blush);
+  border-radius: 999px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.footer-back:hover {
+  background: rgba(242, 154, 181, 0.18);
+  color: var(--color-blush);
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+  }
+  .nav-brand { font-size: 1.3rem; }
+  .nav-link { padding: 0.5rem 1rem; font-size: 1rem; }
+}
